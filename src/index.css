@@ -1,13 +1,108 @@
-body {
+* {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: #444;
+  color: #fff;
+  margin: 2rem;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.formControl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+
+button {
+  outline: none;
+  border: none;
+  align-self: center;
+  width: 300px;
+  height: 25px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.01);
+}
+
+.todo {
+  border-radius: 10px;
+  min-height: 100px;
+  cursor: pointer;
+  border: 1px solid white;
+  box-shadow: 1px 2px 5px black;
+  background-color: #2310ff;
+}
+
+.titleDiv {
+  position: relative;
+}
+
+.todoTitle {
+  text-transform: uppercase;
+  border-radius: 10px 10px 0 0;
+  height: 25px;
+  background-color: #10f5e9;
+  color: black;
+  text-align: center;
+  padding-top: 5px;
+  font-weight: 700;
+}
+
+.todoDescription {
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+.close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  color: red;
+}
+
+.notActive {
+  color: transparent;
+}
+
+input {
+  display: block;
+}
+
+.loader {
+  margin: auto auto;
+  height: 50px;
+  width: 50px;
+  border: 10px solid black;
+  border-radius: 50%;
+  border-top: 10px solid #fff;
+  animation: spin 1000ms infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
